@@ -1,0 +1,5 @@
+#!/bin/bash
+
+make cleanall
+make SYMBOLS="-DEXCEPTION_POLICY" CPPFLAGS="-Wall -ggdb -rdynamic -pthread -I../include -L../lib" LDFLAGS="-lrt -lsoconcur-excp"
+
